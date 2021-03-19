@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+}
+header img {
+  width: 12rem;
+  padding: 0.9rem;
+}
+
+#formulaire {
+  display: flex;
+  background-color: #e9e6e6;
+  height: 3rem;
+  justify-content: center;
+  align-items: center;
+}
+#formulaire i {
+  margin-right: 1rem;
+}
+
+input {
+  background-color: #e9e6e6;
+  width: 100%;
+  border: none;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+}
+
+#presentation {
+  background-color: #f2f2f2;
+  height: 17rem;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+}
+#presentation h2 {
+  padding: 2rem 3rem;
+  padding-bottom: 1rem;
+}
+#presentation p {
+  padding: 0 1rem;
+  padding-bottom: 2rem;
+  color: grey;
+}
+#presentation .pink-btn {
+  border: none;
+  background: linear-gradient(#ff79da, #9356dc);
+  color: white;
+  padding: 1rem;
+  border-radius: 25px;
+  font-size: 1rem;
+  box-shadow: 5px 5px 10px #0000002e;
+}
+
+#fonctionnement {
+  display: flex;
+  flex-direction: column;
+}
+#fonctionnement h2 {
+  font-family: "Roboto", sans-serif;
+  margin: 2rem 1rem;
+}
+#fonctionnement .white-btn {
+  border: none;
+  padding: 1.5rem;
+  margin: 1rem 2rem;
+  border-radius: 15px;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  box-shadow: 5px 5px 10px #0000002e;
+}
+
+/*# sourceMappingURL=style.css.map */
