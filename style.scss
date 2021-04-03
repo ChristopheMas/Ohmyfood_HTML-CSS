@@ -14,14 +14,15 @@ header {
     width: 12rem;
     padding: 0.9rem;
   }
-  button {
-    border: none;
-    background: #fff;
-    font-size: 1.35rem;
-    padding-top: 1rem;
-    padding-right: 7rem;
-  }
 }
+
+header button {
+  border: none;
+  background: #fff;
+  font-size: 1.35rem;
+  padding: 0.9rem;
+}
+
 #formulaire {
   display: flex;
   justify-content: center;
@@ -29,7 +30,6 @@ header {
   background-color: #e9e6e6;
   height: 3rem;
   border-top: solid 2px rgb(202, 197, 197);
-
   i {
     margin-right: 1rem;
   }
@@ -60,7 +60,7 @@ input {
 }
 
 .pink-btn {
-  width: 60%;
+  width: 16rem;
   margin: 2rem auto;
   border: none;
   background: linear-gradient($secondaire, $primaire);
@@ -69,6 +69,10 @@ input {
   border-radius: 25px;
   font-size: 1rem;
   @include shadow;
+  &:hover {
+    background: lighten($secondaire, 5%);
+    box-shadow: 5px 10px 10px #0000002e;
+  }
 }
 
 #fonctionnement {
@@ -83,44 +87,32 @@ input {
 
 .grey-btn {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   width: 90%;
   background-color: rgb(245, 244, 244);
   border: none;
+  text-decoration: none;
   padding: 1.5rem;
   margin: 1rem;
+  margin-left: auto;
+  margin-right: auto;
   border-radius: 15px;
   font-size: 1rem;
   @include shadow;
   @include text-font;
-}
-
-.white-btn {
-  display: flex;
-  justify-content: space-between;
-  width: 90%;
-  background-color: #fff;
-  border: none;
-  padding: 1rem;
-  margin: 1rem;
-  border-radius: 15px;
-  font-size: 1rem;
-  @include shadow;
-  @include text-font;
-  .text {
-    text-align: start;
-    .entitled {
-      font-weight: bold;
-      padding-bottom: 0.4rem;
-    }
-    .description {
-      font-weight: lighter;
+  i {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  &:hover {
+    cursor: pointer;
+    color: $primaire;
+    background-color: lighten($primaire, 35%);
+    p {
+      color: #000;
     }
   }
-}
-.price {
-  padding-top: 1.6rem;
 }
 
 .numero {
@@ -133,7 +125,39 @@ input {
   height: 1.5rem;
   text-align: center;
   line-height: 1.5rem;
-  margin-left: -8rem;
+  margin-left: -2rem;
+}
+
+.white-btn {
+  display: flex;
+  justify-content: space-between;
+  width: 92%;
+  background-color: #fff;
+  border: none;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 15px;
+  font-size: 1rem;
+  @include shadow;
+  @include text-font;
+  .text {
+    text-align: start;
+
+    .entitled {
+      font-weight: bold;
+      padding-bottom: 0.4rem;
+    }
+    .description {
+      font-weight: lighter;
+      width: 15rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}
+.price {
+  padding-top: 1.6rem;
 }
 
 #restaurants {
@@ -145,21 +169,34 @@ input {
   padding-top: 3rem;
   padding-bottom: 3rem;
   a {
+    width: 100%;
     text-decoration: none;
     color: #000;
   }
   figure {
     margin: 0.8rem 1.5rem;
     img {
+      position: relative;
       width: 100%;
       height: 10rem;
       border-radius: 15px 15px 0 0;
     }
   }
 }
+
+.new {
+  position: absolute;
+  color: green;
+  background: $tertiaire;
+  padding: 0.5rem 0.8rem;
+  margin-left: -6.5rem;
+  margin-top: 1rem;
+  @include text-font;
+}
 #restaurants h2 {
   @include text-font;
   padding-left: 1.5rem;
+  padding-bottom: 1rem;
 }
 
 figcaption {
@@ -170,30 +207,63 @@ figcaption {
   padding: 1rem;
 }
 
+.menu-coeur {
+  display: flex;
+  justify-content: space-between;
+  .heart {
+    color: red;
+  }
+}
+
 #menu {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  width: 100%;
   img {
-    width: 100%;
     height: 17rem;
+    width: 100%;
+  }
+  h3 {
+    @include text-font;
+    text-transform: uppercase;
+    font-weight: lighter;
+    font-size: 1.1rem;
+    text-align: start;
+    margin-left: 1.1rem;
+    &::after {
+      content: "";
+      display: block;
+      width: 2.7rem;
+      padding-top: 3px;
+      border-bottom: 3px solid $tertiaire;
+    }
   }
 }
 
 .detail-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background: #f2f2f2;
   border-radius: 35px 35px 0 0;
   margin-top: -3rem;
+  margin-right: auto;
+  margin-left: auto;
   text-align: center;
+  width: 100%;
 }
 
 .titre-menu {
   display: flex;
-  flex-direction: row;
+  justify-content: space-between;
   @include title-font;
-  padding: 1rem;
+  padding: 1rem 3rem;
   h2 {
     font-size: 1.7rem;
+    letter-spacing: 0.5px;
   }
+
   i {
     font-size: 1.7rem;
     line-height: 2.5rem;
@@ -202,7 +272,7 @@ figcaption {
 }
 
 footer {
-  background-color: rgba(34, 33, 33, 0.904);
+  background-color: #333333;
   color: #fff;
   padding: 1rem;
   @include text-font;
@@ -216,6 +286,9 @@ footer {
     color: #fff;
     padding: 0.5rem;
     margin-left: 0.5rem;
+    &:hover {
+      text-decoration: underline;
+    }
 
     p {
       margin-left: 1rem;
@@ -227,8 +300,47 @@ footer {
 }
 
 .logo-footer {
-  width: 30%;
+  width: 8rem;
   margin: 1rem 2rem;
   filter: invert(79%) sepia(99%) saturate(0%) hue-rotate(112deg)
     brightness(116%) contrast(100%);
+}
+
+@media screen and (min-width: 768px) {
+  .grey-btn {
+    width: 40%;
+  }
+
+  .menus-accueil {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  #restaurants a {
+    width: 50%;
+  }
+
+  .white-btn {
+    width: 95%;
+  }
+
+  .white-btn .text .description {
+    width: 30rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .boutons-fonctionnement {
+    display: flex;
+    .grey-btn {
+      width: 30%;
+    }
+  }
+
+  #restaurants a {
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
