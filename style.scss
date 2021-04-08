@@ -7,6 +7,85 @@
   box-sizing: border-box;
 }
 
+.container {
+  z-index: 0;
+}
+
+.wrap {
+  position: absolute;
+  z-index: 1;
+  margin: 0;
+  padding: 0;
+  background: #34495e;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: a3 1s linear 3s 1 forwards;
+}
+
+.loading {
+  width: 12.5rem;
+  height: 12.5rem;
+  box-sizing: border-box;
+  border-radius: 50%;
+  border-top: 10px solid #9356dc;
+  position: relative;
+  animation: a1 2s linear infinite;
+}
+
+.loading::before,
+.loading::after {
+  content: "";
+  width: 12.5rem;
+  height: 12.5rem;
+  position: absolute;
+  left: 0;
+  top: -10px;
+  box-sizing: border-box;
+  border-radius: 50%;
+}
+
+.loading::before {
+  border-top: 10px solid #ff79da;
+  transform: rotate(120deg);
+}
+
+.loading::after {
+  border-top: 10px solid #99e2d0;
+  transform: rotate(240deg);
+}
+
+.loading span {
+  position: absolute;
+  width: 12.5rem;
+  height: 12.5rem;
+  color: #fff;
+  text-align: center;
+  line-height: 12.5rem;
+  font-size: 1.5rem;
+  animation: a2 2s linear infinite;
+}
+
+@keyframes a1 {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes a2 {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes a3 {
+  to {
+    transform: scale(0, 0);
+  }
+}
+
 header {
   display: flex;
   justify-content: center;
@@ -139,6 +218,7 @@ input {
 }
 
 .white-btn {
+  position: relative;
   display: flex;
   justify-content: space-between;
   width: 92%;
@@ -152,44 +232,87 @@ input {
   font-size: 1rem;
   @include shadow;
   @include text-font;
-  .text {
-    text-align: start;
+  animation: cascade 1s linear 0s;
+}
 
-    .entitled {
-      font-weight: bold;
-      padding-bottom: 0.4rem;
-    }
-    .description {
-      font-weight: lighter;
-      width: 15rem;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
+.white-btn1 {
+  animation: cascade 1.5s linear 0s;
+}
+.white-btn2 {
+  animation: cascade 2s linear 0s;
+}
+.white-btn3 {
+  animation: cascade 2.5s linear 0s;
+}
+.white-btn4 {
+  animation: cascade 3s linear 0s;
+}
+.white-btn5 {
+  animation: cascade 3.5s linear 0s;
+}
+.white-btn6 {
+  animation: cascade 4s linear 0s;
+}
+.white-btn7 {
+  animation: cascade 4.5s linear 0s;
+}
+.white-btn8 {
+  animation: cascade 5s linear 0s;
+}
+.white-btn9 {
+  animation: cascade 5.5s linear 0s;
+}
+@keyframes cascade {
+  0% {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.text {
+  text-align: start;
+
+  .entitled {
+    font-weight: bold;
+    padding-bottom: 0.4rem;
+  }
+  .description {
+    font-weight: lighter;
+    width: 15rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+.checkbox {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 0 15px 15px 0;
+  background-color: $tertiaire;
+  margin-top: -1rem;
+  right: 0;
+
+  .fa-check {
+    color: $tertiaire;
+    background-color: #fff;
+    border-radius: 50%;
+    padding: 0.3rem;
   }
 }
 
 .price {
   padding-top: 1.6rem;
-}
-.container {
-  display: flex;
-}
-
-.checkbox {
-  display: none;
-  justify-content: center;
-  align-items: center;
-  background-color: $tertiaire;
-  height: 5rem;
-  width: 5rem;
-  border-radius: 0 15px 15px 0;
-}
-.fa-check {
-  background-color: #fff;
-  color: $tertiaire;
-  border-radius: 50%;
-  padding: 0.3rem;
 }
 
 #restaurants {
@@ -232,22 +355,39 @@ input {
 }
 
 figcaption {
+  position: relative;
   border-radius: 0 0 15px 15px;
   @include shadow;
   @include text-font;
   height: 4.5rem;
   padding: 1rem;
-  i {
+  .moncoeur {
+    width: 2rem;
+    position: absolute;
+    right: 1rem;
+  }
+  .far {
+    position: relative;
     font-size: 2rem;
+  }
+  .fas {
+    position: absolute;
+    font-size: 2rem;
+    right: 0;
+    background: -webkit-linear-gradient($secondaire, $primaire);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0;
+    transition: opacity 1s;
+    &:hover {
+      opacity: 1;
+    }
   }
 }
 
 .menu-coeur {
   display: flex;
   justify-content: space-between;
-  .heart {
-    color: red;
-  }
 }
 
 #menu {
@@ -282,7 +422,7 @@ figcaption {
   justify-content: center;
   background: #f2f2f2;
   border-radius: 35px 35px 0 0;
-  margin-top: -3rem;
+  margin-top: -15rem;
   margin-right: auto;
   margin-left: auto;
   text-align: center;
@@ -384,8 +524,12 @@ footer {
     height: 13rem;
   }
 
+  .detail-menu {
+    width: 90%;
+  }
+
   .white-btn {
-    width: 80%;
+    width: 70%;
     margin-left: auto;
     margin-right: auto;
   }
