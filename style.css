@@ -341,7 +341,7 @@ input {
 }
 @keyframes rotate {
   0% {
-    transform: rotate(O);
+    transform: rotate(Odeg);
   }
   100% {
     transform: rotate(1turn);
@@ -512,7 +512,8 @@ footer a i {
 .logo-footer {
   width: 8rem;
   margin: 1rem 2rem;
-  filter: invert(79%) sepia(99%) saturate(0%) hue-rotate(112deg) brightness(116%) contrast(100%);
+  filter: invert(79%) sepia(99%) saturate(0%) hue-rotate(112deg)
+    brightness(116%) contrast(100%);
 }
 
 @media screen and (min-width: 768px) {
