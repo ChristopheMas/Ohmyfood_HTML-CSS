@@ -22,7 +22,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: a3 1s linear 3s 1 forwards;
+  animation: a3 1s linear 2.5s 1 forwards;
 }
 
 .loading {
@@ -218,7 +218,7 @@ input {
 }
 
 .white-btn {
-  position: relative;
+  box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   width: 92%;
@@ -292,22 +292,55 @@ input {
   }
 }
 .checkbox {
-  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 5rem;
+  width: 0;
   height: 5rem;
   border-radius: 0 15px 15px 0;
   background-color: $tertiaire;
   margin-top: -1rem;
-  right: 0;
+  margin-right: -1rem;
 
   .fa-check {
     color: $tertiaire;
     background-color: #fff;
     border-radius: 50%;
     padding: 0.3rem;
+    opacity: 0;
+    transition: transform 0.5s;
+  }
+}
+.white-btn:hover .checkbox {
+  animation: coulisse 0.5s linear forwards;
+}
+.white-btn:hover .fa-check {
+  transform: rotate(1turn);
+  opacity: 1;
+}
+
+.white-btn:active .checkbox {
+  animation: coulisse 0.5s linear forwards;
+}
+.white-btn:active .fa-check {
+  transform: rotate(1turn);
+  opacity: 1;
+}
+
+@keyframes coulisse {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 5rem;
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(O);
+  }
+  100% {
+    transform: rotate(1turn);
   }
 }
 
