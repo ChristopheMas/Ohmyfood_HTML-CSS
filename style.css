@@ -354,7 +354,7 @@ figcaption .fas:hover {
 .moncoeur2 {
   width: 2rem;
   position: absolute;
-  right: 10rem;
+  right: 4rem;
 }
 .moncoeur2 .far {
   position: relative;
@@ -562,6 +562,10 @@ figcaption .fas:hover {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+  }
+
+  .moncoeur2 {
+    right: 8rem;
   }
 
   #restaurants a {
