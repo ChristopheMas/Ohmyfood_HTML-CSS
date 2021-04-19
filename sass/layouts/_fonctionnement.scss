@@ -1,0 +1,9 @@
+#fonctionnement {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 2rem;
+  h2 {
+    @include text-font;
+    margin: 2rem 1rem;
+  }
+}

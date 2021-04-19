@@ -1,0 +1,57 @@
+.white-btn {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  width: 92%;
+  height: 5rem;
+  background-color: #fff;
+  border: none;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 1rem;
+  @include shadow;
+  @include text-font;
+  animation: cascade 1s linear 0s;
+
+  .price {
+    padding-top: 1.6rem;
+  }
+}
+.text {
+  text-align: start;
+  width: 14rem;
+
+  .entitled {
+    font-weight: bold;
+    padding-bottom: 0.4rem;
+  }
+  .description {
+    font-weight: lighter;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 0;
+  height: 5rem;
+  border-radius: 0 15px 15px 0;
+  background-color: $tertiaire;
+  margin-top: -1rem;
+  margin-right: -1rem;
+
+  .fa-check {
+    color: $tertiaire;
+    background-color: #fff;
+    border-radius: 50%;
+    padding: 0.3rem;
+    opacity: 0;
+    transition: transform 0.5s;
+  }
+}

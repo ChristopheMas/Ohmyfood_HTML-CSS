@@ -1,0 +1,159 @@
+.wrap {
+  position: absolute;
+  z-index: 1;
+  margin: 0;
+  padding: 0;
+  background: #34495e;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: a3 1s linear 2.5s 1 forwards;
+}
+
+.loading {
+  width: 12.5rem;
+  height: 12.5rem;
+  box-sizing: border-box;
+  border-radius: 50%;
+  border-top: 10px solid $primaire;
+  position: relative;
+  animation: a1 2s linear infinite;
+}
+
+.loading::before,
+.loading::after {
+  content: "";
+  width: 12.5rem;
+  height: 12.5rem;
+  position: absolute;
+  left: 0;
+  top: -10px;
+  box-sizing: border-box;
+  border-radius: 50%;
+}
+
+.loading::before {
+  border-top: 10px solid $secondaire;
+  transform: rotate(120deg);
+}
+
+.loading::after {
+  border-top: 10px solid $tertiaire;
+  transform: rotate(240deg);
+}
+
+.loading span {
+  position: absolute;
+  width: 12.5rem;
+  height: 12.5rem;
+  color: #fff;
+  text-align: center;
+  line-height: 12.5rem;
+  font-size: 1.5rem;
+  animation: a2 2s linear infinite;
+}
+
+@keyframes a1 {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes a2 {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes a3 {
+  to {
+    transform: scale(0, 0);
+  }
+}
+
+.white-btn1 {
+  animation: cascade 1.5s linear 0s;
+}
+.white-btn2 {
+  animation: cascade 2s linear 0s;
+}
+.white-btn3 {
+  animation: cascade 2.5s linear 0s;
+}
+.white-btn4 {
+  animation: cascade 3s linear 0s;
+}
+.white-btn5 {
+  animation: cascade 3.5s linear 0s;
+}
+.white-btn6 {
+  animation: cascade 4s linear 0s;
+}
+.white-btn7 {
+  animation: cascade 4.5s linear 0s;
+}
+.white-btn8 {
+  animation: cascade 5s linear 0s;
+}
+.white-btn9 {
+  animation: cascade 5.5s linear 0s;
+}
+@keyframes cascade {
+  0% {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.white-btn:hover .checkbox {
+  animation: coulisse 0.5s linear forwards;
+}
+.white-btn:hover .fa-check {
+  transform: rotate(1turn);
+  opacity: 1;
+}
+
+.white-btn:active .checkbox {
+  animation: coulisse 0.5s linear forwards;
+}
+.white-btn:active .fa-check {
+  transform: rotate(1turn);
+  opacity: 1;
+}
+.white-btn:hover .description {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.white-btn:hover .text {
+  width: 12rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@keyframes coulisse {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 5rem;
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: none;
+  }
+  100% {
+    transform: rotate(1turn);
+  }
+}

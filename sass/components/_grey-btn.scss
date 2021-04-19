@@ -1,0 +1,40 @@
+.grey-btn {
+  justify-content: start;
+  align-items: center;
+  width: 90%;
+  background-color: rgb(245, 244, 244);
+  border: none;
+  text-decoration: none;
+  padding: 1.5rem;
+  margin: 1rem;
+  border-radius: 15px;
+  font-size: 1rem;
+  @include shadow;
+  @include text-font;
+  @include center;
+  i {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  &:hover {
+    cursor: pointer;
+    color: $primaire;
+    background-color: lighten($primaire, 35%);
+    p {
+      color: #000;
+    }
+  }
+}
+
+.numero {
+  @include text-font;
+  border: 1px solid $primaire;
+  background-color: $primaire;
+  color: white;
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  text-align: center;
+  line-height: 1.5rem;
+  margin-left: -2rem;
+}

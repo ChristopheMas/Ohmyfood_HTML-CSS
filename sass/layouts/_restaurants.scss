@@ -1,0 +1,69 @@
+#restaurants {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  background-color: #f2f2f2;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  a {
+    width: 100%;
+    text-decoration: none;
+    color: #000;
+  }
+  figure {
+    margin: 0.8rem 1.5rem;
+    img {
+      position: relative;
+      width: 100%;
+      border-radius: 15px 15px 0 0;
+      object-fit: cover;
+    }
+  }
+}
+
+.new {
+  position: absolute;
+  color: green;
+  background: $tertiaire;
+  padding: 0.5rem 0.8rem;
+  margin-left: -6.5rem;
+  margin-top: 1rem;
+  @include text-font;
+}
+#restaurants h2 {
+  @include text-font;
+  padding-left: 1.5rem;
+  padding-bottom: 1rem;
+}
+
+figcaption {
+  position: relative;
+  border-radius: 0 0 15px 15px;
+  @include shadow;
+  @include text-font;
+  height: 4.5rem;
+  padding: 1rem;
+  .moncoeur {
+    width: 2rem;
+    position: absolute;
+    right: 1rem;
+  }
+  .far {
+    position: relative;
+    font-size: 2rem;
+  }
+  .fas {
+    position: absolute;
+    font-size: 2rem;
+    right: 0;
+    background: -webkit-linear-gradient($secondaire, $primaire);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0;
+    transition: opacity 1s;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}

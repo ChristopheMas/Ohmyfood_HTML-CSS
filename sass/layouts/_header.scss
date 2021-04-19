@@ -1,0 +1,20 @@
+header {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  img {
+    width: 12rem;
+    padding: 0.9rem;
+  }
+}
+
+header a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: none;
+  background: #fff;
+  font-size: 1.35rem;
+  padding: 0.9rem;
+  color: #000;
+}
