@@ -155,12 +155,12 @@ footer a i {
 .white-btn {
   box-sizing: border-box;
   display: flex;
-  justify-content: space-between;
-  width: 92%;
+  justify-content: space-around;
+  width: 72%;
   height: 5rem;
   background-color: #fff;
   border: none;
-  padding: 1rem;
+  padding-top: 1rem;
   margin: 1rem;
   border-radius: 15px;
   cursor: pointer;
@@ -168,14 +168,17 @@ footer a i {
   box-shadow: 5px 5px 10px #0000002e;
   font-family: "Roboto", sans-serif;
   animation: cascade 1s linear 0s;
+  overflow: hidden;
 }
 .white-btn .price {
   padding-top: 1.6rem;
+  margin-right: 1rem;
 }
 
 .text {
   text-align: start;
-  width: 14rem;
+  width: 80%;
+  padding-left: 1rem;
 }
 .text .entitled {
   font-weight: bold;
@@ -183,9 +186,6 @@ footer a i {
 }
 .text .description {
   font-weight: lighter;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .checkbox {
@@ -278,8 +278,9 @@ figcaption .far {
 }
 figcaption .fas {
   position: absolute;
-  font-size: 2rem;
-  right: 0;
+  font-size: 2.1rem;
+  right: -0.05rem;
+  line-height: 2.005rem;
   background: -webkit-linear-gradient(#ff79da, #9356dc);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -377,7 +378,7 @@ figcaption .fas:hover {
 }
 
 .wrap {
-  position: absolute;
+  position: fixed;
   z-index: 1;
   margin: 0;
   padding: 0;
@@ -522,7 +523,7 @@ figcaption .fas:hover {
 }
 
 .white-btn:hover .text {
-  width: 12rem;
+  width: 60%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -530,10 +531,12 @@ figcaption .fas:hover {
 
 @keyframes coulisse {
   0% {
-    width: 0;
+    width: 5rem;
+    transform: translateX(2rem);
   }
   100% {
     width: 5rem;
+    transform: translateX(0);
   }
 }
 @keyframes rotate {
