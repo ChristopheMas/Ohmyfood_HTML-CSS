@@ -121,6 +121,9 @@
   transform: rotate(1turn);
   opacity: 1;
 }
+.white-btn:hover .text {
+  width: 40%;
+}
 
 .white-btn:active .checkbox {
   animation: coulisse 0.5s linear forwards;
@@ -154,12 +157,10 @@
 
 @keyframes coulisse {
   0% {
-    width: 5rem;
-    transform: translateX(2rem);
+    width: 0;
   }
   100% {
     width: 5rem;
-    transform: translateX(0);
   }
 }
 @keyframes rotate {

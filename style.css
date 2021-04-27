@@ -156,8 +156,6 @@ footer a i {
   box-sizing: border-box;
   display: flex;
   justify-content: space-around;
-  width: 90%;
-  height: 5rem;
   background-color: #fff;
   border: none;
   padding-top: 1rem;
@@ -168,25 +166,31 @@ footer a i {
   box-shadow: 5px 5px 10px #0000002e;
   font-family: "Roboto", sans-serif;
   animation: cascade 1s linear 0s;
-  overflow: hidden;
 }
-.white-btn .price {
-  padding-top: 1.6rem;
-  margin-right: 1rem;
+.white-btn .text {
+  text-align: start;
+  width: 60%;
+  padding-left: 0.5rem;
 }
 
-.text {
-  text-align: start;
-  width: 80%;
-  padding-left: 1rem;
+.price {
+  width: 20%;
+  margin-left: 3rem;
+  padding-top: 1.2rem;
 }
-.text .entitled {
+
+.entitled {
   font-weight: bold;
-  padding-bottom: 0.4rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
-.text .description {
+
+.description {
   font-weight: lighter;
   white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .checkbox {
@@ -198,7 +202,7 @@ footer a i {
   border-radius: 0 15px 15px 0;
   background-color: #99e2d0;
   margin-top: -1rem;
-  margin-right: -1rem;
+  margin-right: -1.5rem;
 }
 .checkbox .fa-check {
   color: #99e2d0;
@@ -508,6 +512,10 @@ figcaption .fas:hover {
   opacity: 1;
 }
 
+.white-btn:hover .text {
+  width: 40%;
+}
+
 .white-btn:active .checkbox {
   animation: coulisse 0.5s linear forwards;
 }
@@ -545,12 +553,10 @@ figcaption .fas:hover {
 
 @keyframes coulisse {
   0% {
-    width: 5rem;
-    transform: translateX(2rem);
+    width: 0;
   }
   100% {
     width: 5rem;
-    transform: translateX(0);
   }
 }
 @keyframes rotate {
@@ -589,11 +595,11 @@ figcaption .fas:hover {
   #restaurants a {
     width: 50%;
   }
-
-  .checkbox {
-    margin-right: -2rem;
-  }
 }
+.checkbox {
+  margin-right: -2.1rem;
+}
+
 @media screen and (min-width: 1024px) {
   .boutons-fonctionnement {
     display: flex;
@@ -644,6 +650,9 @@ figcaption .fas:hover {
   .titre-menu h2 {
     margin-left: 4rem;
   }
+}
+.checkbox {
+  margin-right: -0.2rem;
 }
 
 /*# sourceMappingURL=style.css.map */

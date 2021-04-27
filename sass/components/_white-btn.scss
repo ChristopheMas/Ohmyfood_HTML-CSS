@@ -2,8 +2,6 @@
   box-sizing: border-box;
   display: flex;
   justify-content: space-around;
-  width: 90%;
-  height: 5rem;
   background-color: #fff;
   border: none;
   padding-top: 1rem;
@@ -14,26 +12,29 @@
   @include shadow;
   @include text-font;
   animation: cascade 1s linear 0s;
-  overflow: hidden;
 
-  .price {
-    padding-top: 1.6rem;
-    margin-right: 1rem;
+  .text {
+    text-align: start;
+    width: 60%;
+    padding-left: 0.5rem;
   }
 }
-.text {
-  text-align: start;
-  width: 80%;
-  padding-left: 1rem;
-
-  .entitled {
-    font-weight: bold;
-    padding-bottom: 0.4rem;
-  }
-  .description {
-    font-weight: lighter;
-    white-space: nowrap;
-  }
+.price {
+  width: 20%;
+  margin-left: 3rem;
+  padding-top: 1.2rem;
+}
+.entitled {
+  font-weight: bold;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.description {
+  font-weight: lighter;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .checkbox {
@@ -45,7 +46,7 @@
   border-radius: 0 15px 15px 0;
   background-color: $tertiaire;
   margin-top: -1rem;
-  margin-right: -1rem;
+  margin-right: -1.5rem;
 
   .fa-check {
     color: $tertiaire;
