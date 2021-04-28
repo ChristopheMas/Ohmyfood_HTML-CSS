@@ -167,44 +167,40 @@ footer a i {
   font-family: "Roboto", sans-serif;
   animation: cascade 1s linear 0s;
 }
-.white-btn .text {
-  text-align: start;
-  width: 60%;
-  padding-left: 0.5rem;
-}
-
-.price {
-  width: 20%;
-  margin-left: 3rem;
-  padding-top: 1.2rem;
-}
-
-.entitled {
+.white-btn .entitled {
   font-weight: bold;
   white-space: nowrap;
-  text-overflow: ellipsis;
   overflow: hidden;
+  text-overflow: ellipsis;
 }
-
-.description {
+.white-btn .description {
   font-weight: lighter;
   white-space: nowrap;
-  text-overflow: ellipsis;
   overflow: hidden;
+  text-overflow: ellipsis;
 }
-
-.checkbox {
+.white-btn .text {
+  text-align: start;
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+  width: 70%;
+}
+.white-btn .price {
+  padding-top: 1.2rem;
+  padding-left: 0.2rem;
+  width: 30%;
+}
+.white-btn .checkbox {
+  width: 0%;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 0;
   height: 5rem;
   border-radius: 0 15px 15px 0;
   background-color: #99e2d0;
   margin-top: -1rem;
-  margin-right: -1.5rem;
 }
-.checkbox .fa-check {
+.white-btn .checkbox .fa-check {
   color: #99e2d0;
   background-color: #fff;
   border-radius: 50%;
@@ -512,10 +508,6 @@ figcaption .fas:hover {
   opacity: 1;
 }
 
-.white-btn:hover .text {
-  width: 40%;
-}
-
 .white-btn:active .checkbox {
   animation: coulisse 0.5s linear forwards;
 }
@@ -525,38 +517,12 @@ figcaption .fas:hover {
   opacity: 1;
 }
 
-.white-btn:hover .entitled {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.white-btn:hover .description {
-  width: 60%;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.white-btn:active .entitled {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.white-btn:active .description {
-  width: 60%;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
 @keyframes coulisse {
   0% {
     width: 0;
   }
   100% {
-    width: 5rem;
+    width: 50%;
   }
 }
 @keyframes rotate {
@@ -596,10 +562,6 @@ figcaption .fas:hover {
     width: 50%;
   }
 }
-.checkbox {
-  margin-right: -2.1rem;
-}
-
 @media screen and (min-width: 1024px) {
   .boutons-fonctionnement {
     display: flex;
@@ -650,9 +612,6 @@ figcaption .fas:hover {
   .titre-menu h2 {
     margin-left: 4rem;
   }
-}
-.checkbox {
-  margin-right: -0.2rem;
 }
 
 /*# sourceMappingURL=style.css.map */

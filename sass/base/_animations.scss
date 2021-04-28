@@ -121,9 +121,6 @@
   transform: rotate(1turn);
   opacity: 1;
 }
-.white-btn:hover .text {
-  width: 40%;
-}
 
 .white-btn:active .checkbox {
   animation: coulisse 0.5s linear forwards;
@@ -132,35 +129,13 @@
   transform: rotate(1turn);
   opacity: 1;
 }
-.white-btn:hover .entitled {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.white-btn:hover .description {
-  width: 60%;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.white-btn:active .entitled {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.white-btn:active .description {
-  width: 60%;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
 
 @keyframes coulisse {
   0% {
     width: 0;
   }
   100% {
-    width: 5rem;
+    width: 50%;
   }
 }
 @keyframes rotate {
