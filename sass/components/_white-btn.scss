@@ -38,7 +38,8 @@
   }
 
   .checkbox {
-    width: 0%;
+    box-sizing: border-box;
+    width: 0;
     display: flex;
     justify-content: center;
     align-items: center;

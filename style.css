@@ -191,7 +191,8 @@ footer a i {
   width: 30%;
 }
 .white-btn .checkbox {
-  width: 0%;
+  box-sizing: border-box;
+  width: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -519,10 +520,10 @@ figcaption .fas:hover {
 
 @keyframes coulisse {
   0% {
-    width: 0;
+    min-width: 0;
   }
   100% {
-    width: 50%;
+    min-width: 4rem;
   }
 }
 @keyframes rotate {
