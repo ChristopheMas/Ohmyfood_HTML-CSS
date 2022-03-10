@@ -1,1 +1,1 @@
-# Projet 3 Openclassrooms ohmyfood
+# Projet 2 Openclassrooms ohmyfood
